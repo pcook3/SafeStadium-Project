@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Report</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="report.js"></script>
 </head>
 <body>
+
 
     <nav>
         <ul>
@@ -17,8 +19,41 @@
         </ul>
     </nav>
 
+
     <h1>Report</h1>
     <p>Submit reports and track progress.</p>
+
+
+    <form id="report-form">
+        <label for="shift">Choose Shift:</label>
+        <select id="shift" name="shift" required>
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="night">Night</option>
+        </select>
+
+
+        <label for="reportTo">Send Report To:</label>
+        <select id="reportTo" name="reportTo" required>
+            <option value="manager">Boss/Manager</option>
+            <option value="worker">Worker</option>
+        </select>
+
+
+        <label for="reportDescription">Describe the Report:</label>
+        <textarea id="reportDescription" name="reportDescription" rows="4" placeholder="Enter your report..." required></textarea>
+
+
+        <button type="submit">Submit Report</button>
+        <button type="button" id="clear-button">Clear</button>
+    </form>
+
+
+    <h2>Real-Time Report Tracking</h2>
+    <div id="report-tracking-container">
+        <!-- Real-time report updates will go here -->
+    </div>
+
 
 </body>
 </html>
