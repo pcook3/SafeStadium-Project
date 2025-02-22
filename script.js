@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // Hardcoded shift schedule 
-    let isScheduled = false;
+    let isScheduled = true;
 
     // Update the UI
     if (isScheduled) {
