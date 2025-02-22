@@ -1,12 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const statusText = document.getElementById("shift-status");
-    const startTime = "02:00 PM";
-    const endTime = "07:00 PM";
-    statusText.innerText += ` Your shift is from ${startTime} to ${endTime}.`;
 
 
     // Hardcoded shift schedule 
-    let isScheduled = true;
+    const isScheduled = true;
 
     // Update the UI
     if (isScheduled) {
@@ -16,4 +13,5 @@ document.addEventListener("DOMContentLoaded", function () {
         statusText.innerText = "You do not have a shift today.";
         statusText.style.color = "red";
     }
+
 });
