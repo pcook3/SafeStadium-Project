@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeStadium</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Function to update date and time
+        function updateTime() {
+            const now = new Date();
+            document.getElementById("time").innerText = now.toLocaleTimeString();
+            document.getElementById("date").innerText = now.toDateString();
+        }
+
+        // Function to check day and toggle feature
+        function toggleFeature() {
+            const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, etc.
+            const feature = document.getElementById("special-feature");
+
+            if (today === 1) { // Example: Only enable on Mondays
+                feature.style.display = "block";
+            } else {
+                feature.style.display = "none";
+            }
+        }
+
+        // Auto-update time every second
+        setInterval(updateTime, 1000);
+
+        // Fetch dummy temperature (or use API)
+        function updateTemperature() {
+            // Example: Set a random temp or fetch from an API
+            const temp = Math.floor(Math.random() * 15) + 60; // Random between 60°F - 75°F
+            document.getElementById("temperature").innerText = temp + "°F";
+        }
+
+        // Run functions on page load
+        window.onload = function () {
+            updateTime();
+            toggleFeature();
+            updateTemperature();
+        };
+    </script>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="my-shifts.html">My Shifts</a></li>
+            <li><a href="announcements.html">Announcements</a></li>
+            <li><a href="report.html">Report</a></li>
+        </ul>
+    </nav>
+
+    <h1>SafeStadium</h1>
+
+    <p>Current Date: <span id="date"></span></p>
+    <p>Current Time: <span id="time"></span></p>
+    <p>Temperature: <span id="temperature"></span></p>
+
+    <div id="special-feature" style="display: none;">
+        <p>Special Monday-Only Feature is Active!</p>
+    </div>
+
+</body>
+</html>
