@@ -13,14 +13,6 @@
             document.getElementById("date").innerText = now.toDateString();
         }
 
-        // Function to check day and toggle feature
-        function toggleFeature() {
-            const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, etc.
-            const feature = document.getElementById("special-feature");
-
-
-        }
-
         // Auto-update time every second
         setInterval(updateTime, 1000);
 
@@ -34,7 +26,6 @@
         // Run functions on page load
         window.onload = function () {
             updateTime();
-            toggleFeature();
             updateTemperature();
         };
     </script>
