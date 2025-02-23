@@ -3,18 +3,20 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    text-align: center;
 }
 
 nav {
-    background: #333;
-    padding: 10px;
+    background-color: #004080;
+    padding: 10px 0;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
@@ -23,9 +25,35 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    color: white;
     font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #00264d;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #004080;
+    margin-top: 20px;
+    font-size: 42px;
+    font-family: 'Arial Black', sans-serif;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+span {
+    font-weight: bold;
+    color: #0073e6;
 }
 
 .container {

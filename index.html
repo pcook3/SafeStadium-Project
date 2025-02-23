@@ -18,19 +18,15 @@
             const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, etc.
             const feature = document.getElementById("special-feature");
 
-            if (today === 1) { // Example: Only enable on Mondays
-                feature.style.display = "block";
-            } else {
-                feature.style.display = "none";
-            }
+
         }
 
         // Auto-update time every second
         setInterval(updateTime, 1000);
 
-        // Fetch dummy temperature (or use API)
+        // Fetch temperature
         function updateTemperature() {
-            // Example: Set a random temp or fetch from an API
+            // Set a random temp, in the future get realtime with API
             const temp = Math.floor(Math.random() * 15) + 60; // Random between 60°F - 75°F
             document.getElementById("temperature").innerText = temp + "°F";
         }
@@ -60,9 +56,6 @@
     <p>Current Time: <span id="time"></span></p>
     <p>Temperature: <span id="temperature"></span></p>
 
-    <div id="special-feature" style="display: none;">
-        <p>Special Monday-Only Feature is Active!</p>
-    </div>
 
 </body>
 </html>
